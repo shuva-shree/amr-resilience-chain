@@ -1,0 +1,42 @@
+Filters
+Region filter: South-East Asia Region
+Infection type filter: Bloodstream
+Bacterial pathogen filter: Klebsiella pneumoniae
+Antibiotic filter: Meropenem
+
+Data for time series
+"Year","Specimen","PathogenName","AbTargets","Min","Q1","Median","Q3","Max"
+2018,"BLOOD","Klebsiella pneumoniae","Meropenem",NA,NA,NA,NA,NA
+2019,"BLOOD","Klebsiella pneumoniae","Meropenem",38.436482085,38.436482085,38.436482085,38.436482085,38.436482085
+2020,"BLOOD","Klebsiella pneumoniae","Meropenem",39.130434783,39.130434783,39.130434783,39.130434783,39.130434783
+2021,"BLOOD","Klebsiella pneumoniae","Meropenem",47.565543071,47.565543071,47.565543071,47.565543071,47.565543071
+2022,"BLOOD","Klebsiella pneumoniae","Meropenem",40.410958904,40.410958904,40.410958904,40.410958904,40.410958904
+2023,"BLOOD","Klebsiella pneumoniae","Meropenem",33.458646617,33.458646617,33.458646617,33.458646617,33.458646617
+
+
+Data for line plots for individual CTAs
+"Iso3","CountryTerritoryArea","WHORegionName","Year","Specimen","PathogenName","AbTargets","TotalSpecimenIsolates","InterpretableAST","Resistant","PercentResistant"
+"IND","India","South-East Asia Region",2018,"BLOOD","Klebsiella pneumoniae","Meropenem",14459,1289,711,55.159038014
+"IDN","Indonesia","South-East Asia Region",2018,"BLOOD","Klebsiella pneumoniae","Meropenem",1381,188,22,11.70212766
+"NPL","Nepal","South-East Asia Region",2018,"BLOOD","Klebsiella pneumoniae","Meropenem",1202,55,14,25.454545455
+"THA","Thailand","South-East Asia Region",2018,"BLOOD","Klebsiella pneumoniae","Meropenem",2629,325,29,8.923076923
+"IND","India","South-East Asia Region",2019,"BLOOD","Klebsiella pneumoniae","Meropenem",24223,3612,2079,57.558139535
+"IDN","Indonesia","South-East Asia Region",2019,"BLOOD","Klebsiella pneumoniae","Meropenem",2314,648,96,14.814814815
+"NPL","Nepal","South-East Asia Region",2019,"BLOOD","Klebsiella pneumoniae","Meropenem",2380,187,46,24.598930481
+"THA","Thailand","South-East Asia Region",2019,"BLOOD","Klebsiella pneumoniae","Meropenem",5463,905,104,11.491712707
+"IND","India","South-East Asia Region",2020,"BLOOD","Klebsiella pneumoniae","Meropenem",12371,2610,1499,57.432950192
+"IDN","Indonesia","South-East Asia Region",2020,"BLOOD","Klebsiella pneumoniae","Meropenem",1676,385,73,18.961038961
+"NPL","Nepal","South-East Asia Region",2020,"BLOOD","Klebsiella pneumoniae","Meropenem",1515,401,64,15.960099751
+"THA","Thailand","South-East Asia Region",2020,"BLOOD","Klebsiella pneumoniae","Meropenem",6159,1152,110,9.548611111
+"IND","India","South-East Asia Region",2021,"BLOOD","Klebsiella pneumoniae","Meropenem",34056,6153,3586,58.280513571
+"IDN","Indonesia","South-East Asia Region",2021,"BLOOD","Klebsiella pneumoniae","Meropenem",3070,678,161,23.746312684
+"NPL","Nepal","South-East Asia Region",2021,"BLOOD","Klebsiella pneumoniae","Meropenem",1301,256,59,23.046875
+"THA","Thailand","South-East Asia Region",2021,"BLOOD","Klebsiella pneumoniae","Meropenem",6559,1130,169,14.955752212
+"IND","India","South-East Asia Region",2022,"BLOOD","Klebsiella pneumoniae","Meropenem",43929,7553,4614,61.088309281
+"IDN","Indonesia","South-East Asia Region",2022,"BLOOD","Klebsiella pneumoniae","Meropenem",5596,1489,341,22.901276024
+"NPL","Nepal","South-East Asia Region",2022,"BLOOD","Klebsiella pneumoniae","Meropenem",2829,438,231,52.739726027
+"THA","Thailand","South-East Asia Region",2022,"BLOOD","Klebsiella pneumoniae","Meropenem",9544,1657,221,13.337356669
+"IND","India","South-East Asia Region",2023,"BLOOD","Klebsiella pneumoniae","Meropenem",41375,8610,5405,62.775842044
+"IDN","Indonesia","South-East Asia Region",2023,"BLOOD","Klebsiella pneumoniae","Meropenem",9180,2280,547,23.99122807
+"NPL","Nepal","South-East Asia Region",2023,"BLOOD","Klebsiella pneumoniae","Meropenem",2740,371,202,54.447439353
+"THA","Thailand","South-East Asia Region",2023,"BLOOD","Klebsiella pneumoniae","Meropenem",14722,2390,482,20.167364017

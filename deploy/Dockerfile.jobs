@@ -1,0 +1,28 @@
+# Container image for the scheduled ingestion jobs (Cloud Run job).
+#
+# Build from the REPO ROOT:
+#   gcloud builds submit --tag gcr.io/<project>/amr-jobs -f deploy/Dockerfile.jobs .
+#
+# Python 3.13 to match requirements.txt (numpy/pandas need >=3.12).
+FROM python:3.13-slim-bookworm
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+      ca-certificates curl && \
+    rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt && \
+    python -m playwright install --with-deps chromium
+
+COPY backend ./backend
+
+# Default: run a job named by $JOB (glass-monthly | glass-etl | hospital-drops | synthetic-amr)
+ENV JOB=glass-monthly
+ENTRYPOINT ["sh", "-c", "python -m backend.jobs $JOB"]

@@ -1,0 +1,38 @@
+# --- Secrets / local env ---
+.env
+.env.local
+backend/.env
+backend/.env.local
+*.local
+# keep the documented templates + the (non-secret) frontend build URL
+!*.example
+!frontend/.env.production
+
+# --- Python ---
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Node / frontend ---
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+dist-ssr/
+
+# --- Local data / logs / scratch ---
+storage/
+logs/
+*.log
+
+# --- OS / editor / agent ---
+.DS_Store
+.idea/
+.vscode/
+*.swp
+.claude/settings.local.json

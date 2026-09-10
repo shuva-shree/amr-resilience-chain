@@ -1,0 +1,29 @@
+# Files NOT uploaded to Cloud Build when you run `gcloud builds submit` /
+# `gcloud run deploy --source`. Keeps the upload small and secrets out.
+
+.git/
+.gitignore
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+
+# Node / frontend build (the API image does not need it)
+frontend/node_modules/
+frontend/dist/
+
+# Secrets & local env — provided to Cloud Run via Secret Manager instead
+backend/.env
+backend/.env.*
+!backend/.env.production.example
+.env
+*.local
+
+# Local data / logs / scratch
+storage/
+logs/
+*.log

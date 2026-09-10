@@ -1,0 +1,14 @@
+# AMR Resilience — local cron schedule for ingestion agents.
+# Install with:  crontab deploy/cron.txt   (edit paths first)
+# cwd must be the repo root; uses the project virtualenv.
+
+REPO=/Users/shuvashreebaisya/Development/amr_resilience
+
+# Module 1 — WHO GLASS monthly ingestion (browser agent + ETL): 06:00 UTC on the 2nd
+0 6 2 * *    cd $REPO && .venv/bin/python -m backend.jobs glass-monthly   >> $REPO/logs/glass.log 2>&1
+
+# Module 1 — GLASS ETL only (pick up manually dropped raw files): hourly
+0 * * * *    cd $REPO && .venv/bin/python -m backend.jobs glass-etl       >> $REPO/logs/glass-etl.log 2>&1
+
+# Module 2 — hospital bucket-drop sweep: every 15 minutes
+*/15 * * * *  cd $REPO && .venv/bin/python -m backend.jobs hospital-drops  >> $REPO/logs/hospital.log 2>&1
