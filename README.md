@@ -5,7 +5,7 @@ It combines antibiotic inventory, resistance surveillance, supplier-network
 resilience, what-if scenario modelling and a governance/approval layer over a
 single BigQuery data layer, with automated data-ingestion agents.
 
-**Live demo:** https://patchamomma-2026-505909.web.app
+**Live demo:** https://amr-resilience.web.app
 (`admin` / `admin2026` — see [Demo accounts](#demo-accounts))
 
 ---

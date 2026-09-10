@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "amr-resilience",
     "public": "dist",
     "ignore": [
       "firebase.json",

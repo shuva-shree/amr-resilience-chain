@@ -261,25 +261,34 @@ Answer:
 - **set up automatic builds with GitHub** → No
 - **overwrite dist/index.html** → **No**
 
+The default hosting URL is `https://patchamomma-2026-505909.web.app`. To use a
+friendlier URL, create a named site once and point the config at it:
+
+```bash
+firebase hosting:sites:create amr-resilience   # -> https://amr-resilience.web.app
+```
+then add `"site": "amr-resilience"` inside the `"hosting"` block of
+`frontend/firebase.json` (already done in this repo).
+
 ### 5.5 Deploy
 
 ```bash
 firebase deploy --only hosting
 ```
-It prints a **Hosting URL** like `https://patchamomma-2026-505909.web.app`.
-**Copy it.**
+It prints the **Hosting URL** — `https://amr-resilience.web.app`. **Copy it.**
 
 ---
 
 ## Part 6 — Connect the two (CORS)
 
-The API must be told to accept browser requests from your new frontend URL.
+The API must be told to accept browser requests from your frontend URL(s).
 
 ```bash
 gcloud run services update amr-api --region us-central1 \
-  --update-env-vars "CORS_ORIGINS=https://patchamomma-2026-505909.web.app"
+  --update-env-vars "^@^CORS_ORIGINS=https://amr-resilience.web.app,https://patchamomma-2026-505909.web.app"
 ```
-(If you later add a custom domain, put both here, comma-separated.)
+(`^@^` sets `@` as the delimiter so the comma-separated list isn't split.
+Add a custom domain here too if you set one up.)
 
 Wait ~30 seconds for the new revision to go live.
 
@@ -287,7 +296,7 @@ Wait ~30 seconds for the new revision to go live.
 
 ## Part 7 — Smoke test the live app
 
-1. Open your Hosting URL in a browser.
+1. Open https://amr-resilience.web.app in a browser.
 2. You should land on the **login page**.
 3. Log in as `admin` / `admin2026`.
 4. Check each area has data:
